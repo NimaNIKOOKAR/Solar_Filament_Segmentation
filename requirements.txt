@@ -1,3 +1,4 @@
+--extra-index-url https://download.pytorch.org/whl/cu128
 asttokens==3.0.2
 certifi==2026.7.22
 charset-normalizer==3.5.2
@@ -42,7 +43,9 @@ requests==2.34.2
 six==1.17.0
 stack-data==0.6.3
 sympy==1.14.0
-torch==2.14.1
+torch==2.11.0+cu128
+torchvision==0.26.0+cu128
+setuptools==81.0.0
 tornado==6.5.10
 traitlets==5.16.1
 typing_extensions==4.16.0
