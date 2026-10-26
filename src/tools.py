@@ -32,7 +32,7 @@ def get_image(image_path : str):
 def show_image_with_segmentation(df : pd.DataFrame , image_path: str):
 
     image , image_array = get_image(image_path)
-    plt.figure(figsize=(10,8))
+    plt.figure(figsize=(4,4))
     plt.imshow(image , cmap='gray')
     plt.axis()
 
