@@ -7,9 +7,13 @@ from PIL import Image
 from matplotlib import pyplot as plt
 from matplotlib.patches import Polygon
 
-train_images_dir = Path("../data/train/train_images")
-test_images_dir = Path("../data/test/test_images")
-MAGFILO = Path("../data/train/MAGFiLO_1.0_Annotations_kaggle2026_train.json")
+PROJECT_DATA_DIR = Path("/content/data")
+
+DATA_DIR = PROJECT_DATA_DIR / "data"
+
+TRAIN_IMAGES_DIR = Path.joinpath(DATA_DIR,"train/train_images")
+TEST_IMAGES_DIR = Path(DATA_DIR,"test/test_images")
+MAGFILO = Path(DATA_DIR,"train/MAGFiLO_1.0_Annotations_kaggle2026_train.json")
 
 
 def get_image(image_path : str):
@@ -22,7 +26,7 @@ def get_image(image_path : str):
         
     """
 
-    image_path = train_images_dir / image_path
+    image_path = TRAIN_IMAGES_DIR / image_path
     image = Image.open(image_path)
     image_array = np.asarray(image.convert("L"))
 
